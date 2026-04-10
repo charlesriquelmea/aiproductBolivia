@@ -8,6 +8,12 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Badge } from '@/components/ui/badge'
+import { CredibilitySection } from '@/components/sections/credibility-section'
+import { InstructorSection } from '@/components/sections/instructor-section'
+import { NextJsAdvantageSection } from '@/components/sections/nextjs-advantage-section'
+import { VibeCodingSection } from '@/components/sections/vibe-coding-section'
+import { translations } from "@/lib/translations"
+import type { Lang } from "@/lib/translations"
 
 
 export default function LandingPage() {
@@ -28,6 +34,8 @@ export default function LandingPage() {
   const scrollToForm = () => {
     document.getElementById('apply-form')?.scrollIntoView({ behavior: 'smooth' })
   }
+
+  const c = translations.es
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -109,6 +117,9 @@ export default function LandingPage() {
       {/* What You Build */}
       <WhatYouBuild />
 
+      <VibeCodingSection c={c} />
+      <NextJsAdvantageSection c={c} />
+
       {/* Tech Stack */}
       <TechStack />
 
@@ -120,6 +131,9 @@ export default function LandingPage() {
 
       {/* Is This For You */}
       <IsThisForYou />
+
+      <CredibilitySection c={c} />
+      <InstructorSection c={c} />
 
       {/* Application Form */}
       <ApplicationForm />
@@ -176,8 +190,8 @@ function StickyHeader({ scrollToForm }: { scrollToForm: () => void }) {
 function EntryOfferHero({ scrollToForm }: { scrollToForm: () => void }) {
   return (
     <section className="py-20 px-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/10 via-transparent to-transparent pointer-events-none" />
-      
+      <div className="absolute inset-0 bg-linear-to-b from-emerald-500/10 via-transparent to-transparent pointer-events-none" />
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -200,7 +214,7 @@ function EntryOfferHero({ scrollToForm }: { scrollToForm: () => void }) {
           </p>
         </div>
 
-        <Card className="bg-gradient-to-br from-emerald-500/10 via-black to-black border-emerald-500/30 rounded-3xl p-8 md:p-10 backdrop-blur">
+        <Card className="bg-linear-to-br from-emerald-500/10 via-black to-black border-emerald-500/30 rounded-3xl p-8 md:p-10 backdrop-blur">
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
               <div className="text-5xl mb-3">⚡</div>
@@ -245,7 +259,7 @@ function EntryOfferHero({ scrollToForm }: { scrollToForm: () => void }) {
 
           <Button
             onClick={scrollToForm}
-            className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white font-black text-xl py-6 rounded-2xl animate-pulse-glow shadow-lg shadow-emerald-500/20"
+            className="w-full bg-linear-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white font-black text-xl py-6 rounded-2xl animate-pulse-glow shadow-lg shadow-emerald-500/20"
           >
             Quiero aplicar al programa Entry ($97) →
           </Button>
@@ -335,7 +349,7 @@ function TechStack() {
   ]
 
   return (
-    <section id="tech-stack" className="py-20 px-4 bg-white/[0.02]">
+    <section id="tech-stack" className="py-20 px-4 bg-white/2">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -385,7 +399,7 @@ function AutomationShowcase() {
         viewport={{ once: true, amount: 0.2 }}
         className="max-w-3xl mx-auto"
       >
-        <Card className="bg-white/[0.02] border-emerald-500/20 rounded-2xl p-8">
+        <Card className="bg-white/2 border-emerald-500/20 rounded-2xl p-8">
           <div className="mb-6">
             <p className="text-emerald-400 uppercase tracking-widest text-xs font-bold mb-3">
               Lo que construís en la Semana 1
@@ -403,11 +417,10 @@ function AutomationShowcase() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: i * 0.15 }}
                   viewport={{ once: true, amount: 0.2 }}
-                  className={`${
-                    node.highlight
-                      ? 'bg-emerald-500/10 border-emerald-500/30'
-                      : 'bg-white/10 border-white/10'
-                  } border rounded-xl p-4 text-center min-w-[120px] w-full md:w-auto`}
+                  className={`${node.highlight
+                    ? 'bg-emerald-500/10 border-emerald-500/30'
+                    : 'bg-white/10 border-white/10'
+                    } border rounded-xl p-4 text-center min-w-30 w-full md:w-auto`}
                 >
                   <div className="text-3xl mb-2">{node.icon}</div>
                   <div className="font-bold mb-1 text-white">{node.label}</div>
@@ -448,7 +461,7 @@ function AutomationShowcase() {
 
 function Curriculum() {
   return (
-    <section id="curriculum" className="py-20 px-4 bg-white/[0.02]">
+    <section id="curriculum" className="py-20 px-4 bg-white/2">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -475,7 +488,7 @@ function Curriculum() {
               </Badge>
               <span className="font-bold text-lg text-white">Tu Primera Landing Page en Producción</span>
             </div>
-            
+
             <ul className="space-y-3 mb-4">
               <li className="flex gap-2">
                 <span className="text-emerald-400">✓</span>
@@ -519,7 +532,7 @@ function Curriculum() {
               </Badge>
               <span className="font-bold text-lg text-white">APIs, Lógica de Negocio y tu Primer Workflow Completo</span>
             </div>
-            
+
             <ul className="space-y-3 mb-4">
               <li className="flex gap-2">
                 <span className="text-indigo-400">✓</span>
@@ -663,7 +676,7 @@ function ApplicationForm() {
   }
 
   return (
-    <section id="apply-form" className="py-20 px-4 bg-white/[0.02]">
+    <section id="apply-form" className="py-20 px-4 bg-white/2">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -680,7 +693,7 @@ function ApplicationForm() {
           </p>
         </div>
 
-        <Card className="bg-white/[0.03] border-white/10 rounded-2xl p-8">
+        <Card className="bg-white/3 border-white/10 rounded-2xl p-8">
           {/* Progress Bar */}
           <div className="mb-8">
             <div className="bg-white/10 rounded-full h-2 overflow-hidden">
@@ -781,21 +794,19 @@ function ApplicationForm() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <button
                     onClick={() => setFormData({ ...formData, committed: 'yes' })}
-                    className={`rounded-xl border p-5 cursor-pointer transition ${
-                      formData.committed === 'yes'
-                        ? 'border-emerald-500 bg-emerald-500/10'
-                        : 'border-white/20 bg-white/5 hover:border-white/40'
-                    }`}
+                    className={`rounded-xl border p-5 cursor-pointer transition ${formData.committed === 'yes'
+                      ? 'border-emerald-500 bg-emerald-500/10'
+                      : 'border-white/20 bg-white/5 hover:border-white/40'
+                      }`}
                   >
                     <p className="font-bold text-white">Sí, estoy listo 🔥</p>
                   </button>
                   <button
                     onClick={() => setFormData({ ...formData, committed: 'no' })}
-                    className={`rounded-xl border p-5 cursor-pointer transition ${
-                      formData.committed === 'no'
-                        ? 'border-rose-500 bg-rose-500/5'
-                        : 'border-white/20 bg-white/5 hover:border-white/40'
-                    }`}
+                    className={`rounded-xl border p-5 cursor-pointer transition ${formData.committed === 'no'
+                      ? 'border-rose-500 bg-rose-500/5'
+                      : 'border-white/20 bg-white/5 hover:border-white/40'
+                      }`}
                   >
                     <p className="font-bold text-white">No por ahora</p>
                   </button>
@@ -949,7 +960,7 @@ function SupportSystem() {
 
 function Pricing({ scrollToForm }: { scrollToForm: () => void }) {
   return (
-    <section id="pricing" className="py-20 px-4 bg-white/[0.02]">
+    <section id="pricing" className="py-20 px-4 bg-white/2">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -957,7 +968,7 @@ function Pricing({ scrollToForm }: { scrollToForm: () => void }) {
         viewport={{ once: true, amount: 0.2 }}
         className="max-w-lg mx-auto"
       >
-        <Card className="bg-gradient-to-b from-emerald-500/10 to-transparent border-emerald-500/30 rounded-3xl p-8 hover:shadow-emerald-500/20 hover:shadow-2xl transition">
+        <Card className="bg-linear-to-b from-emerald-500/10 to-transparent border-emerald-500/30 rounded-3xl p-8 hover:shadow-emerald-500/20 hover:shadow-2xl transition">
           <Badge className="bg-emerald-500 text-white text-xs font-bold mb-3">
             ⚡ Más popular
           </Badge>
@@ -1064,12 +1075,12 @@ function Footer() {
         <div className="flex items-center justify-center gap-4">
           <a href="#" className="text-white/30 hover:text-white transition">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z" />
             </svg>
           </a>
           <a href="#" className="text-white/30 hover:text-white transition">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
             </svg>
           </a>
         </div>
