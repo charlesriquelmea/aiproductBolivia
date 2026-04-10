@@ -88,17 +88,11 @@ export const translations = {
         description: 'Formulario → n8n → CRM en Google Sheets + notificación automática por Resend. Sin intervención manual.',
         badge: 'Semana 1–2'
       },
-      {
-        icon: '💼',
-        title: 'Sistema de Cotizaciones',
-        description: 'Una app con IA que genera propuestas para tus clientes en segundos.',
-        badge: 'Semana 2'
-      }
     ],
 
     // Vibe Coding
     vibeTitle: "El código ya no es la barrera. El método, sí.",
-    vibeIntro: "Hoy aprender a construir software no significa memorizar sintaxis. Significa dominar el método para decirle a la IA exactamente qué construir, cómo iterarlo y cuándo está listo para producción. Ese método tiene nombre: Vibe Coding. Y en 3 horas lo vas a dominar.",
+    vibeIntro: "Hoy aprender a construir software no significa memorizar sintaxis. Significa dominar el método para decirle a la IA exactamente qué construir, cómo iterarlo y cuándo está listo para producción. Ese método tiene nombre: Vibe Coding. Y en 90 minutos lo vas a dominar.",
     vibeSteps: [
       {
         num: "01",
@@ -116,7 +110,7 @@ export const translations = {
         body: "Sin depender de nadie. Tu código, tu dominio, tu ingreso.",
       },
     ],
-    alertTitle: "¿Por qué un taller en vivo de 3 horas enseña más que 20 horas de curso grabado?",
+    alertTitle: "¿Por qué un taller en vivo de 90 minutos enseña más que 20 horas de curso grabado?",
     alertBullets: [
       "Los cursos grabados tienen 73% de abandono antes del módulo 3.",
       "Un taller en vivo fuerza la ejecución inmediata — sin pausa, sin procrastinación.",
@@ -153,7 +147,7 @@ export const translations = {
         icon: "Rocket",
       },
     ],
-    nextQuote: "Las empresas que más invierten en Next.js no lo hacen por tendencia. Lo hacen porque convierte mejor, rankea mejor y escala sin límite. Tú lo aprenderás en 3 horas.",
+    nextQuote: "Las empresas que más invierten en Next.js no lo hacen por tendencia. Lo hacen porque convierte mejor, rankea mejor y escala sin límite. Tú lo aprenderás en 90 minutos.",
 
     // Tech Stack
     techTitle: "Las herramientas que el mercado está pidiendo ahora.",
@@ -216,7 +210,7 @@ export const translations = {
         'Sos egresado buscando una habilidad técnica con demanda real en Bolivia',
         'Tenés una idea pero no sabés construirla sin contratar un dev',
         'Querés cobrar por tu primera landing page esta semana',
-        'Podés dedicar 2–3 horas diarias durante 2 semanas'
+        'Podés dedicar 2–90 minutos diarias durante 2 semanas'
       ]
     },
     forYouNo: {
@@ -457,7 +451,7 @@ export const translations = {
 
     // Vibe Coding
     vibeTitle: "Code is no longer the barrier. The method is.",
-    vibeIntro: "Today learning to build software doesn't mean memorizing syntax. It means mastering the method to tell AI exactly what to build, how to iterate it, and when it's production-ready. That method has a name: Vibe Coding. And in 3 hours you'll master it.",
+    vibeIntro: "Today learning to build software doesn't mean memorizing syntax. It means mastering the method to tell AI exactly what to build, how to iterate it, and when it's production-ready. That method has a name: Vibe Coding. And in 90 minutes you'll master it.",
     vibeSteps: [
       {
         num: "01",
@@ -512,7 +506,7 @@ export const translations = {
         icon: "Rocket",
       },
     ],
-    nextQuote: "Companies investing in Next.js don't do it for trends. They do it because it converts better, ranks better, and scales without limits. You'll learn it in 3 hours.",
+    nextQuote: "Companies investing in Next.js don't do it for trends. They do it because it converts better, ranks better, and scales without limits. You'll learn it in 90 minutes.",
 
     // Tech Stack
     techTitle: "The tools the market is asking for right now.",
@@ -575,7 +569,7 @@ export const translations = {
         "You're a graduate looking for technical skills with real demand in Bolivia",
         "You have an idea but don't know how to build it without hiring a dev",
         "You want to charge for your first landing page this week",
-        "You can dedicate 2–3 hours daily for 2 weeks"
+        "You can dedicate 2–90 minutes daily for 2 weeks"
       ]
     },
     forYouNo: {

@@ -7,10 +7,14 @@ import { Copy } from "@/lib/translations"
 
 interface HeroSectionProps {
   c: Copy
-  scrollToForm: () => void
 }
 
-export function HeroSection({ c, scrollToForm }: HeroSectionProps) {
+export function HeroSection({ c }: HeroSectionProps) {
+
+  const scrollToForm = () => {
+    document.getElementById('apply-form')?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   const [currentPhrase, setCurrentPhrase] = useState(0)
 
   useEffect(() => {
@@ -47,11 +51,12 @@ export function HeroSection({ c, scrollToForm }: HeroSectionProps) {
           {c.heroSubtitle}
         </h2>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center break-all mb-12">
           <Button
             onClick={scrollToForm}
             size="lg"
-            className="bg-emerald-500 hover:bg-emerald-400 text-white font-bold text-lg px-8 py-6 rounded-xl animate-pulse-glow"
+            className="bg-emerald-500 hover:bg-emerald-400 text-white 
+            font-bold text-lg px-8 py-6 rounded-xl animate-pulse-glow"
           >
             {c.heroCta}
           </Button>

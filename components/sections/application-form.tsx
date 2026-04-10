@@ -103,7 +103,6 @@ export function ApplicationForm({ c }: ApplicationFormProps) {
                   {c.formSteps.step1.label}
                 </label>
                 <Input
-                  autoFocus
                   placeholder={c.formSteps.step1.placeholder}
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}

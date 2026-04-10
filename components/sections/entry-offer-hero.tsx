@@ -8,10 +8,14 @@ import { Copy } from "@/lib/translations"
 
 interface EntryOfferHeroProps {
   c: Copy
-  scrollToForm: () => void
 }
 
-export function EntryOfferHero({ c, scrollToForm }: EntryOfferHeroProps) {
+export function EntryOfferHero({ c }: EntryOfferHeroProps) {
+
+  const scrollToForm = () => {
+    document.getElementById('apply-form')?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <section className="py-20 px-4 relative overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-b from-emerald-500/10 via-transparent to-transparent pointer-events-none" />
@@ -66,8 +70,15 @@ export function EntryOfferHero({ c, scrollToForm }: EntryOfferHeroProps) {
 
           <Button
             onClick={scrollToForm}
-            className="w-full bg-linear-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white font-black text-xl py-6 rounded-2xl animate-pulse-glow shadow-lg shadow-emerald-500/20"
-          >
+            /* className="w-full bg-linear-to-r from-emerald-500 to-emerald-600
+             hover:from-emerald-400 hover:to-emerald-500 text-white font-black
+              text-xl py-6 rounded-2xl animate-pulse-glow shadow-lg shadow-emerald-500/20"
+          > */
+            className="w-full bg-linear-to-r h-full from-emerald-500 to-emerald-600 
+             hover:from-emerald-400 hover:to-emerald-500 
+             text-white font-black text-xl py-3 rounded-2xl 
+             animate-pulse-glow shadow-lg shadow-emerald-500/20 
+             whitespace-normal text-center" >
             {c.entryCta}
           </Button>
 
