@@ -107,7 +107,7 @@ export function InstructorSection({ c }: InstructorProps) {
           <FounderCard
             initials={INSTRUCTOR_INITIALS}
             name={INSTRUCTOR_NAME}
-            badge={c.instructorBadge}
+            badge={c.founderBadge}
             bio={c.instructorBio}
             stats={c.instructorStats}
             delay={0}
