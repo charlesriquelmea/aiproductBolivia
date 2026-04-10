@@ -231,7 +231,7 @@ export const translations = {
       {
         icon: "Building2",
         title: "Metodología probada",
-        body: "AI Product Builder Bolivia es una formación enfocada en resultados. Nuestra metodología está basada en años construyendo productos digitales reales para clientes globales.",
+        body: "AI Product Builder Bolivia es una formación enfocada en resultados. Nuestra metodología está basada en años construyendo productos digitales reales para clientes globales como una software factory con más de 12 años de experiencia.",
       },
       {
         icon: "Wrench",
@@ -248,6 +248,7 @@ export const translations = {
     // Instructor
     sectionTeach: "Quiénes enseñan",
     sectionFounders: "Los fundadores",
+    founderBadge: "Fundador & CEO",
     instructorBadge: "Co-Fundador & CTO",
     instructorBio: "Ingeniero de software con 7+ años construyendo productos full-stack a escala. Especialista en arquitectura TypeScript/Angular, DevOps con Docker y productos basados en IA.",
     instructorStats: [
@@ -317,7 +318,7 @@ export const translations = {
         title: 'Agente IA 24/7',
         badge: 'Nivel 1',
         badgeColor: 'bg-emerald-500/20 text-emerald-400',
-        desc: 'Asistente entrenado con el currículum completo. Resuelve tus dudas técnicas a cualquier hora, sin juicios.'
+        desc: 'Asistente entrenado con el currículum completo. Resuelve tus dudas técnicas a cualquier hora, sin juicios. Acceso por 30 dias incluidos.'
       }
     ],
 
@@ -590,7 +591,7 @@ export const translations = {
       {
         icon: "Building2",
         title: "Proven Methodology",
-        body: "AI Product Builder Bolivia is a results-focused training. Our methodology is based on years of building real digital products for global clients.",
+        body: "AI Product Builder Bolivia is a results-oriented training program. Our methodology is based on years of building real digital products for global clients as a software factory with over 12 years of experience.",
       },
       {
         icon: "Wrench",
@@ -607,6 +608,7 @@ export const translations = {
     // Instructor
     sectionTeach: "Who Teaches",
     sectionFounders: "The Founders",
+    founderBadge: "Founder & CEO",
     instructorBadge: "Co-Founder & CTO",
     instructorBio: "Software engineer with 7+ years building full-stack products at scale. Specialist in TypeScript/Angular architecture, DevOps with Docker, and AI-based products.",
     instructorStats: [
@@ -676,7 +678,7 @@ export const translations = {
         title: '24/7 AI Agent',
         badge: 'Level 1',
         badgeColor: 'bg-emerald-500/20 text-emerald-400',
-        desc: 'Assistant trained with the full curriculum. Resolves your technical doubts at any time, without judgment.'
+        desc: 'Trained support assistant with a full resume. Get your technical questions answered anytime, no judgment. 30-day access included.'
       }
     ],
 
