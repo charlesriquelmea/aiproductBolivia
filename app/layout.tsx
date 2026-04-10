@@ -13,21 +13,8 @@ export const metadata: Metadata = {
   description: 'Aprende a crear landings que venden en 1 semana. Cobra tu primer proyecto. Entry ($97) → Sprint 1-2: Landing en producción + primer workflow básico en n8n.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: 'favicon.png',
+    apple: 'favicon.png',
   },
 }
 

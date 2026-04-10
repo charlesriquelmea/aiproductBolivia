@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { StickyHeader } from '@/components/sections/sticky-header'
 import { HeroSection } from '@/components/sections/hero-section'
 import { EntryOfferHero } from '@/components/sections/entry-offer-hero'
@@ -22,20 +22,23 @@ import { translations, type Lang } from "@/lib/translations"
 export default function LandingPage() {
   const [lang, setLang] = useState<Lang>('es')
   
-  const scrollToForm = () => {
-    document.getElementById('apply-form')?.scrollIntoView({ behavior: 'smooth' })
-  }
-
   const c = translations[lang]
+  
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual'
+    }
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <StickyHeader c={c} lang={lang} setLang={setLang} scrollToForm={scrollToForm} />
+      <StickyHeader c={c} lang={lang} setLang={setLang} />
 
       <main>
-        <HeroSection c={c} scrollToForm={scrollToForm} />
+        <HeroSection c={c} />
         
-        <EntryOfferHero c={c} scrollToForm={scrollToForm} />
+        <EntryOfferHero c={c} />
         
         <WhatYouBuild c={c} />
         
@@ -59,7 +62,7 @@ export default function LandingPage() {
         
         <SupportSystem c={c} />
         
-        <PricingSection c={c} scrollToForm={scrollToForm} />
+        <PricingSection c={c}  />
       </main>
 
       <FooterSection c={c} />

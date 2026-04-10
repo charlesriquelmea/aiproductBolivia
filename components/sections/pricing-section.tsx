@@ -8,10 +8,14 @@ import { Copy } from "@/lib/translations"
 
 interface PricingSectionProps {
   c: Copy
-  scrollToForm: () => void
 }
 
-export function PricingSection({ c, scrollToForm }: PricingSectionProps) {
+export function PricingSection({ c }: PricingSectionProps) {
+
+  const scrollToForm = () => {
+    document.getElementById('apply-form')?.scrollIntoView({ behavior: 'smooth' })
+  }
+  
   return (
     <section id="pricing" className="py-20 px-4 bg-white/2">
       <motion.div

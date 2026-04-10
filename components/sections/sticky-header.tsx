@@ -9,10 +9,15 @@ interface StickyHeaderProps {
   c: Copy
   lang: Lang
   setLang: (lang: Lang) => void
-  scrollToForm: () => void
 }
 
-export function StickyHeader({ c, lang, setLang, scrollToForm }: StickyHeaderProps) {
+
+export function StickyHeader({ c, lang, setLang }: StickyHeaderProps) {
+
+  const scrollToForm = () => {
+    document.getElementById('apply-form')?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -20 }}
@@ -55,9 +60,9 @@ export function StickyHeader({ c, lang, setLang, scrollToForm }: StickyHeaderPro
             {c.navCta}
           </Button>
         </nav>
-        
+
         <div className="flex items-center gap-3 md:hidden">
-           <div className="flex items-center gap-2 border-r border-white/10 pr-4">
+          <div className="flex items-center gap-2 border-r border-white/10 pr-4">
             <button
               onClick={() => setLang('es')}
               className={`text-xs font-bold transition ${lang === 'es' ? 'text-emerald-400' : 'text-white/40'}`}
