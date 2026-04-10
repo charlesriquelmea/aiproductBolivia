@@ -328,7 +328,7 @@ export const translations = {
     priceValue: "97",
     priceCurrency: "USD",
     priceDetail: "Pago único • Acceso permanente al contenido",
-    priceGuarantee: "🛡️ Garantía de devolución total en 7 días. Sin preguntas.",
+    priceGuarantee: "🛡️ Garantía de satisfacción: Si no completas aunque sea una landing Pages en producción. El próximo bootcamp te lo damos gratuito.",
     priceSections: [
       {
         title: "📹 Contenido asincrónico",
@@ -688,7 +688,7 @@ export const translations = {
     priceValue: "97",
     priceCurrency: "USD",
     priceDetail: "One-time payment • Permanent content access",
-    priceGuarantee: "🛡️ 7-day full money-back guarantee. No questions asked.",
+    priceGuarantee: "🛡️ Satisfaction guaranteed: If you don't complete at least one live landing page, we'll give you the next bootcamp for free.",
     priceSections: [
       {
         title: "📹 Asynchronous Content",
