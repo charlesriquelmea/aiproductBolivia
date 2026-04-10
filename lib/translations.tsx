@@ -1,83 +1,102 @@
 
-
-export const SPOTS_AVAILABLE = 50 // [REEMPLAZAR: CUPOS_DISPONIBLES]
-export const INSTRUCTOR_NAME = "Carlos Riquelme" // [REEMPLAZAR: NOMBRE_INSTRUCTOR]
-export const INSTRUCTOR_INITIALS = "CR" // [REEMPLAZAR: INICIALES_INSTRUCTOR]
-export const INSTRUCTOR_PROJECTS = "10" // [REEMPLAZAR: X_PROYECTOS_DEPLOYADOS]
-export const INSTRUCTOR_STUDENTS = 340 // [REEMPLAZAR: X_ALUMNOS_FORMADOS]
-export const INSTRUCTOR_YEARS = "13+" // [REEMPLAZAR: X_AÑOS_EXPERIENCIA]
-export const ENROLLED_THIS_WEEK = 23 // [REEMPLAZAR: X_PERSONAS_INSCRITAS_SEMANA]
+export const SPOTS_AVAILABLE = 50
+export const INSTRUCTOR_NAME = "Carlos Riquelme"
+export const INSTRUCTOR_INITIALS = "CR"
+export const INSTRUCTOR_PROJECTS = "10"
+export const INSTRUCTOR_STUDENTS = 340
+export const INSTRUCTOR_YEARS = "13+"
+export const ENROLLED_THIS_WEEK = 23
 
 export const translations = {
   es: {
-
-    instructorName: "Daniel Castiblanco",
-    instructorBadge: "Co-Fundador & CTO",
-    instructorBio: "Ingeniero de software con 7+ años construyendo productos full-stack a escala. Especialista en arquitectura TypeScript/Angular, DevOps con Docker y productos basados en IA. Creador de Sendell, plataforma de agentes IA en producción con clientes activos.",
-    instructorStats: [
-      { value: "30+", label: "Proyectos deployados" },
-      { value: "7+", label: "Años de experiencia" },
-    ],
-    sectionTeach: "Quiénes enseñan",
-    sectionFounders: "Los fundadores",
-
     // Navbar
-    navLogo: "Build in Nextjs",
+    navLogo: "AI Product Builder",
+    navBadge: "Bolivia",
     navLinks: [
-      { label: "El Método", href: "#metodo" },
       { label: "Programa", href: "#curriculum" },
-      { label: "Testimonios", href: "#testimonios" },
-      { label: "Inscribirse", href: "#form" },
+      { label: "Stack", href: "#tech-stack" },
+      { label: "Precio", href: "#pricing" },
     ],
-    navCta: "Asegurar cupo — $297",
-    navCountdownLabel: "EB:",
+    navCta: "Aplicar ahora →",
+    navCtaMobile: "Aplicar →",
 
     // Hero
-    eyebrow: `🎓 Formación Intensiva · 2 horas · Solo ${SPOTS_AVAILABLE} cupos · NJ · NY · USA`,
-    headline: "Domina la habilidad de crear y deployar landing pages/web sites desde $1,500+",
-    typewriterPrefix: "Tu próxima landing page está",
-    typewriterPhrases: [
-      "deployada en producción — construida por ti.",
-      "y tú ya sabes cómo cobrar $1,500+ por ella.",
-      "porque aprendiste el método de los mejores.",
-      "tu nueva habilidad que paga $1,500–$5,000 por proyecto.",
-      "construida en 2 horas de formación intensiva.",
+    heroPhrases: [
+      "Crea landings que venden.",
+      "Automatiza con n8n.",
+      "Cobra tu primer proyecto."
     ],
-    subheadline: "En este taller en vivo aprenderás el método exacto que usan los developers mejor pagados en USA para crear, deployar y vender landing pages con Next.js, IA y herramientas pro — en tiempo real, contigo, este Miércoles",
-    trustSignals: [
-      { icon: "⚡", text: "2 horas en vivo" },
-      { icon: "💼", text: "$1,500+ por proyecto" },
-      { icon: "🛡️", text: "Garantía total" },
+    heroSubtitle: "Aprende a crear landings que venden en 1 semana. Cobra tu primer proyecto.",
+    heroCta: "Quiero aplicar ahora →",
+    heroSecondaryCta: "Ver el programa completo ↓",
+    heroStats: [
+      { label: '7 días', delay: 0 },
+      { label: '2 Sprints', delay: 0.15 },
+      { label: '+8h práctica', delay: 0.3 },
+      { label: '100% en producción', delay: 0.45 }
     ],
-    heroCta: "Asegurar mi cupo ($297) →",
-    heroCopy: "Aprende · construye · deploya · en un solo Miércoles · Garantía total si no aprendes nada aplicable",
-    heroSecondary: "Ver qué construirás ↓",
-    browserUrl: "Build in Nextjs.com ✓ 🔒",
-    terminalLines: [
-      "$ npx create-next-app@latest mi-landing",
-      "✓ Ready in 2.3s",
-      "$ vercel deploy",
-      "✅ Production: https://mi-landing.vercel.app",
-    ],
-    vercelBadge: "▲ Deployed to Production",
 
-    // Tech ticker
-    tickerPrefix: "Construirás con →",
-    tickerSuffix: "🇺🇸 100% en español · For the Latino community in USA",
-
-    // Pain points
-    painTitle: "¿Te suena familiar alguno de estos?",
-    painPoints: [
-      { icon: "💸", title: "El dev más barato que encontraste cobró $800 y tardó 4 semanas" },
-      { icon: "🔗", title: "Dependes de alguien más para actualizar tu propio sitio" },
-      { icon: "📉", title: "Tus clientes eligen a la competencia porque tienen mejor presencia digital" },
-      { icon: "⏳", title: "Llevas meses con esa landing page pendiente mientras pierdes leads" },
-      { icon: "💻", title: "Intentaste aprender a programar pero los tutoriales son interminables" },
+    // Entry Offer
+    entryBadge: "🔥 Oferta Entry — Nivel Fundacional",
+    entryTitle: "$97 USD • 2 Sprints • 14 días",
+    entryAccent: "Landing en producción + primer workflow básico en n8n",
+    entrySubtext: "Promesa: Cobra tu primera landing page en 1 semana",
+    entrySprints: [
+      {
+        icon: '⚡',
+        title: 'Sprint 1',
+        desc: 'Landing profesional desplegada en Vercel'
+      },
+      {
+        icon: '🔄',
+        title: 'Sprint 2',
+        desc: 'Workflow completo: Form → n8n → CRM → Email'
+      },
+      {
+        icon: '💰',
+        title: 'Outcome',
+        desc: 'Portafolio real para cobrar tu primer cliente'
+      }
     ],
-    painFeaturedTitle: "Pagaste cursos de programación que te dejaron más confundido que antes",
-    painFeaturedBody: "(Los cursos tradicionales te enseñan a programar como en 2015. Este taller te enseña a construir como se hace en 2026.)",
+    entryOutcomeHeader: "Lo que llevás al finalizar:",
+    entryOutcomeList: [
+      'Landing page profesional en producción',
+      'Dominio propio configurado',
+      'Formulario de captura de leads activo',
+      'Workflow n8n funcionando 24/7',
+      'Google Sheets como CRM en tiempo real',
+      'Notificaciones automáticas por Resend',
+      'Certificado de finalización digital',
+      'Acceso permanente a la comunidad'
+    ],
+    entryCta: "Quiero aplicar al programa Entry ($97) →",
+    entryGuarantee: "🛡️ Garantía de devolución total en 7 días • Sin preguntas",
 
-    // Vibe Coding section
+    // What You Build
+    whatTitle: "Tu portafolio al finalizar.",
+    whatSubtitle: "En producción. Desde el día 1.",
+    whatProjects: [
+      {
+        icon: '🌐',
+        title: 'Landing Page Profesional',
+        description: 'Un sitio web listo para capturar leads, desplegado en Vercel con tu dominio.',
+        badge: 'Semana 1'
+      },
+      {
+        icon: '⚡',
+        title: 'Workflow de Automatización',
+        description: 'Formulario → n8n → CRM en Google Sheets + notificación automática por Resend. Sin intervención manual.',
+        badge: 'Semana 1–2'
+      },
+      {
+        icon: '💼',
+        title: 'Sistema de Cotizaciones',
+        description: 'Una app con IA que genera propuestas para tus clientes en segundos.',
+        badge: 'Semana 2'
+      }
+    ],
+
+    // Vibe Coding
     vibeTitle: "El código ya no es la barrera. El método, sí.",
     vibeIntro: "Hoy aprender a construir software no significa memorizar sintaxis. Significa dominar el método para decirle a la IA exactamente qué construir, cómo iterarlo y cuándo está listo para producción. Ese método tiene nombre: Vibe Coding. Y en 3 horas lo vas a dominar.",
     vibeSteps: [
@@ -105,7 +124,7 @@ export const translations = {
       "Cuando terminas, tienes el resultado Y la habilidad. No solo el video.",
     ],
 
-    // Next.js advantage
+    // Next.js Advantage
     nextTitle: "No es solo código. Es la tecnología que usan los gigantes.",
     nextIntro: "Las landing pages que construirás en este taller no son HTML estático. Son aplicaciones Next.js — el mismo framework que usan Netflix, TikTok, Twitch, Hulu, y miles de startups valuadas en millones. Eso cambia el precio que puedes cobrar.",
     nextCards: [
@@ -136,139 +155,80 @@ export const translations = {
     ],
     nextQuote: "Las empresas que más invierten en Next.js no lo hacen por tendencia. Lo hacen porque convierte mejor, rankea mejor y escala sin límite. Tú lo aprenderás en 3 horas.",
 
+    // Tech Stack
+    techTitle: "Las herramientas que el mercado está pidiendo ahora.",
+    techTools: [
+      { icon: '⚡', name: 'v0.app', desc: 'Genera interfaces profesionales con prompts' },
+      { icon: '🔄', name: 'n8n', desc: 'Automatizaciones visuales sin escribir código' },
+      { icon: '🧠', name: 'Claude Code', desc: 'IA que escribe la lógica por vos' },
+      { icon: '🚀', name: 'Vercel', desc: 'Deploy en producción en minutos' },
+      { icon: '📊', name: 'Google Sheets', desc: 'Tu CRM visual desde el día 1' },
+      { icon: '📧', name: 'Resend', desc: 'Notificaciones automáticas de leads en tiempo real' }
+    ],
+
+    // Automation Showcase
+    autoEyebrow: "Lo que construís en la Semana 1",
+    autoTitle: "Lead Capture → CRM con notificación automática",
+    autoNodes: [
+      { icon: '📋', label: 'Form', desc: 'Tu landing captura el lead', highlight: false },
+      { icon: '⚡', label: 'n8n', desc: 'Orquesta todo el flujo', highlight: true },
+      { icon: '📊', label: 'Sheets', desc: 'CRM real con cada lead', highlight: false },
+      { icon: '📧', label: 'Emailing', desc: 'Notificación vía Resend', highlight: false }
+    ],
+    autoFooter: "Cada vez que alguien llena tu formulario, n8n lo captura, lo guarda en tu Google Sheets como un CRM real, y te envía una notificación instantánea por Resend. Nunca más un lead perdido.",
+
     // Curriculum
-    curriculumTitle: "Tu Miércoles, módulo a módulo — 2 horas que cambian tu carrera:",
-    learnBadge: "Aprenderás:",
-    leaveBadge: "Saldrás con:",
-    modules: [
+    currTitle: "2 Sprints. 14 días. Un portafolio real.",
+    currSprints: [
       {
-        time: "10:00 AM ET",
-        title: "Setup Express con Antigravity + Next.js",
-        duration: "20 min",
-        learn: "Cómo configurar tu entorno profesional con Next.js 15 y Antigravity desde cero.",
-        leave: "Tu proyecto corriendo localmente con stack profesional listo para producción.",
+        badge: "Sprint 1 — Semana 1",
+        title: "Tu Primera Landing Page en Producción",
+        items: [
+          "Generás tu UI completa con v0.app usando solo prompts (sin escribir código)",
+          "Conectás un formulario de captura de leads real",
+          "Automatizás el flujo: Formulario → n8n → Google Sheets → Resend",
+          "Deploy en Vercel con dominio propio en menos de 10 minutos",
+          "Proyecto entregable: Landing profesional lista para mostrar y cobrar"
+        ],
+        outcome: "🎯 Outcome: Terminás la semana con una landing page en producción y tu primer workflow de CRM activo."
       },
       {
-        time: "10:20 AM ET",
-        title: "Landing Page con IA — Hero que paraliza el scroll",
-        duration: "40 min",
-        learn: "La anatomía de un Hero que convierte: jerarquía visual + copy + CTA. Animaciones profesionales con Motion.",
-        leave: "Tu primera sección deployada en Vercel — URL real que puedes compartir.",
-      },
-      {
-        time: "11:00 AM ET",
-        title: "Formulario conectado a WhatsApp Business + Email automático",
-        duration: "30 min",
-        learn: "Integrar Resend para emails automáticos de bienvenida y WhatsApp API para conversiones reales.",
-        leave: "Landing page completa con formulario funcional que captura leads y los manda a WhatsApp.",
-      },
-      {
-        time: "11:30 AM ET",
-        title: "Deploy en Vercel o Cloudflare Pages con dominio propio",
-        duration: "30 min",
-        learn: "Deploy profesional con HTML/CSS/JS + Next.js. Dominio personalizado. Tu sitio en internet para siempre.",
-        leave: "Sitio deployado con dominio propio, indexable en Google, listo para conseguir clientes.",
-      },
+        badge: "Sprint 2 — Semana 2",
+        title: "APIs, Lógica de Negocio y tu Primer Workflow Completo",
+        items: [
+          "Webhooks, JSON y APIs REST explicados en lenguaje humano",
+          "Sistema de cotizaciones automático construido en n8n",
+          "Claude Code procesa y transforma datos reales",
+          "Notificaciones por email automáticas con Resend para cada acción del usuario",
+          "Proyecto entregable: Sistema completo de automatización para un negocio real"
+        ],
+        outcome: "🎯 Outcome: Salís con 2 proyectos en tu portafolio que podés vender mañana mismo."
+      }
     ],
 
-    // Value stack
-    valueTitle: "Todo lo que construyes y recibes al inscribirte hoy:",
-    valueItems: [
-      { label: "Acceso al taller en vivo (2 horas) — Landing Page con IA", price: "$397" },
-      { label: "Tu landing page deployada con dominio propio", price: "$297" },
-      { label: "Formulario conectado a WhatsApp Business", price: "$197" },
-      { label: "Email automático de bienvenida (Resend)", price: "$97" },
-      { label: "Animaciones profesionales (Motion)", price: "$97" },
-      { label: "Grabación privada 7 días", price: "$97" },
-      { label: "Comunidad privada de WhatsApp (30 días)", price: "$57" },
-      { label: "Q&A en vivo con el instructor", price: "$97" },
-    ],
-    valueTotalLabel: "Valor total de la formación:",
-    valueTotalPrice: "$1,336",
-    valueYourLabel: "Tu inversión hoy:",
-    valueYourPrice: "$297",
-    valueAnchor: "Un dev en NJ cobra $150/hr. 2 horas de consultoría = $300. Tú pagas $297 y aprendes a construirlo tú — para siempre.",
-
-    // Pricing tiers
-    pricingTitle: "Elige tu acceso — cupos limitados:",
-    pricingTiers: [
-      {
-        label: "Chamber of Commerce Latino NJ",
-        badge: "Miembros",
-        price: "$197",
-        originalPrice: "$297",
-        savings: "Ahorras $100",
-        description: "Exclusivo para miembros activos de la Chamber of Commerce Latino New Jersey.",
-        cta: "Quiero este precio →",
-      },
-      {
-        label: "Aliados del ecosistema",
-        badge: "Aliados",
-        price: "$247",
-        originalPrice: "$297",
-        savings: "Ahorras $50",
-        description: "Para asesores de negocios, contadores, coaches y consultores que refieren clientes.",
-        cta: "Quiero este precio →",
-      },
-      {
-        label: "Público general",
-        badge: "Early Bird",
-        price: "$297",
-        originalPrice: "$397",
-        savings: "Precio sube a $397 pronto",
-        description: "Acceso completo al taller. Precio early bird activo mientras haya cupos disponibles.",
-        cta: "Asegurar mi cupo →",
-        highlighted: true,
-      },
-    ],
-
-    // Growth hack
-    growthTitle: "Trae un amigo y los dos pagan menos:",
-    growthBody: "Refiere a un familiar, amigo o colega — cuando ambos se inscriban, cada uno paga solo $197 en lugar de $297. Comparte tu link personalizado y el descuento se aplica automático. Solo disponible para los próximos 10 cupos referidos.",
-    growthBadge: "Solo 10 cupos con este precio",
-    growthCta: "Obtener mi link de referido →",
-
-    // Payment options
-    paymentTitle: "Opciones de pago flexibles:",
-    paymentOptions: [
-      { label: "Pago completo", detail: "$297 hoy", highlight: false },
-      { label: "3 cuotas", detail: "~$99–$107 / mes", highlight: false },
-      { label: "Reserva anticipada", detail: "$150 hoy → resto en 2 cuotas hasta el workshop", highlight: true },
-    ],
-
-    // Testimonials
-    testimonialTitle: "Lo que dicen quienes ya vivieron la formación:",
-    testimonials: [
-      {
-        before: "Había intentado 3 cursos de programación y los abandoné todos...",
-        during: "...pero cuando vi al instructor construir el Hero en vivo, de repente todo tenía sentido.",
-        after: "A las dos semanas ya había cobrado mi primer cliente $450 en Hackensack, NJ.",
-        author: "María R.",
-        role: "Freelancer · Nueva Jersey",
-      },
-      {
-        before: "Tenía mi negocio de estética pero sin presencia online. Dependía 100% de Instagram...",
-        during: "...en el módulo de SEO entendí por qué Google no me encontraba. Fue un momento 'aha' total.",
-        after: "Mi landing en Next.js ahora aparece en Google. Conseguí 3 clientes nuevos el primer mes.",
-        author: "Carlos M.",
-        role: "Emprendedor · Queens, NY",
-      },
-      {
-        before: "Era diseñadora en Canva. No sabía nada de código. Sentía que el desarrollo web no era para mí...",
-        during: "...cuando deployé mi primera URL en Vercel a los 45 minutos, me puse a llorar de emoción.",
-        after: "Ahora ofrezco landing pages en Next.js a $800 a restaurantes latinos en mi área.",
-        author: "Diana P.",
-        role: "Diseñadora → Developer · Paterson, NJ",
-      },
-    ],
-    beforeLabel: "Antes",
-    duringLabel: "Durante",
-    afterLabel: "Después",
-    statsBar: `🎓 ${INSTRUCTOR_STUDENTS}+ alumnos formados · 🌎 NJ · NY · FL · TX · CA · IL · y más · ⭐ 4.9/5 valoración promedio · 💼 $450 ingreso promedio primer mes`,
-
-    // Guarantee
-    guaranteeTitle: "Garantía de aprendizaje real",
-    guaranteeBody: "Si completas el taller en vivo y al terminar las 2 horas no puedes mostrarme una landing page deployada con tu nombre, te damos acceso liberado al próximo workshop — sin costo. También puedes optar por una gift card para repetir el taller cuando quieras. Tienes múltiples caminos de regreso: no perdiste nada.\n\nNo vendemos acceso a un webinar. Vendemos la certeza de que vas a construir algo que funciona, con tu nombre en internet, el mismo día.",
+    // Is This For You
+    forYouTitle: "¿Este programa es para vos?",
+    forYouYes: {
+      title: "Es perfecto para vos si...",
+      icon: "✅",
+      items: [
+        'Sos emprendedor y necesitás digitalizarte ya, no en 6 meses',
+        'Sos egresado buscando una habilidad técnica con demanda real en Bolivia',
+        'Tenés una idea pero no sabés construirla sin contratar un dev',
+        'Querés cobrar por tu primera landing page esta semana',
+        'Podés dedicar 2–3 horas diarias durante 2 semanas'
+      ]
+    },
+    forYouNo: {
+      title: "No es para vos si...",
+      icon: "❌",
+      items: [
+        'Preferís aprender teoría antes de construir algo real',
+        'Esperás que la IA haga todo sola sin que vos dirijas nada',
+        'No tenés tiempo para practicar durante las 2 semanas',
+        'Buscás un título universitario, no resultados inmediatos'
+      ]
+    },
 
     // Credibility
     credibilityTitle: "Credibilidad",
@@ -277,7 +237,7 @@ export const translations = {
       {
         icon: "Building2",
         title: "Metodología probada",
-        body: "El Build Nextjs Landing Pages es una spin-off de Protolylat. Somos una software factory con experiencia real de más de 12 años construyendo productos digitales para clientes reales.",
+        body: "AI Product Builder Bolivia es una formación enfocada en resultados. Nuestra metodología está basada en años construyendo productos digitales reales para clientes globales.",
       },
       {
         icon: "Wrench",
@@ -286,249 +246,218 @@ export const translations = {
       },
       {
         icon: "Star",
-        title: "Primera edición exclusiva",
-        body: "El Cohort #1 es una oportunidad única: acceso directo a los fundadores, precio de founding member, y la oportunidad de dar forma al programa.",
+        title: "Comunidad exclusiva",
+        body: "Acceso directo a una red de emprendedores y tecnólogos en Bolivia que están construyendo el futuro con IA.",
       },
     ],
 
     // Instructor
-/*     instructorBio: `Arquitecto de ecosistemas con 12 años innovando en tech. 10 productos construidos. 9 incubaciones impulsadas en Latam. Especializado en el mercado latino: emprendedores, equipos y builders que quieren construir negocios reales con herramientas de frontera.`,
-    instructorBadge: "🌎 Founder & CEO",
+    sectionTeach: "Quiénes enseñan",
+    sectionFounders: "Los fundadores",
+    instructorBadge: "Co-Fundador & CTO",
+    instructorBio: "Ingeniero de software con 7+ años construyendo productos full-stack a escala. Especialista en arquitectura TypeScript/Angular, DevOps con Docker y productos basados en IA.",
     instructorStats: [
-      { label: "Proyectos deployados", value: `${INSTRUCTOR_PROJECTS}+` },
-      { label: "Años de experiencia", value: `${INSTRUCTOR_YEARS}` },
-    ], */
-
-    // FAQ
-    faqTitle: "Preguntas frecuentes",
-    faqs: [
-      {
-        q: "¿Necesito saber programar para asistir?",
-        a: "No. Este taller está diseñado para profesionales sin background técnico. El método Vibe Coding usa IA como copilot para que tú dirijas qué construir, no que escribas cada línea de código.",
-      },
-      {
-        q: "¿Qué pasa si me quedo atrás durante el taller?",
-        a: "El instructor hace pauses de sincronización cada 30 minutos. Además, todos los participantes reciben el código base al inicio.",
-      },
-      {
-        q: "¿En qué se diferencia esto de ver un tutorial de YouTube?",
-        a: "En un tutorial aprendes mirando. Aquí construyes en tiempo real con 50 personas, con un instructor que responde tus dudas específicas. Esa presión activa consolida el aprendizaje.",
-      },
-      {
-        q: "¿Puedo usar lo que aprenda para mi trabajo actual?",
-        a: "Absolutamente. Más del 60% de nuestros alumnos han aplicado las habilidades dentro de su empleo actual o para ofrecer servicios freelance en paralelo.",
-      },
-      {
-        q: "¿Por qué me registra por WhatsApp?",
-        a: "Así confirmamos tu cupo inmediatamente, te enviamos el link del taller y los recordatorios. Es más rápido y directo que el email — y podemos responderte cualquier pregunta antes del evento.",
-      },
-      {
-        q: "¿El taller se graba?",
-        a: "Hay acceso a grabación privada por 7 días — sin garantía de replay permanente. El taller está diseñado para vivirse en vivo: la energía de grupo y el Q&A en tiempo real son parte del aprendizaje.",
-      },
-      {
-        q: "¿Puedo ofrecer este servicio a clientes después?",
-        a: "Sí, y de hecho dedicamos 15 minutos del módulo final específicamente a esto. El código que construyes es 100% tuyo con licencia comercial.",
-      },
+      { value: "30+", label: "Proyectos deployados" },
+      { value: "7+", label: "Años de experiencia" },
     ],
 
-    // Form
-    formTitle: `Asegura tu cupo — Solo quedan ${SPOTS_AVAILABLE} lugares`,
-    formSubtitle: "2 minutos · 100% por WhatsApp · Sin tarjeta de crédito aún",
-    step0Title: "¡Reserva tu lugar en 2 minutos!",
-    step0Body: `Solo ${SPOTS_AVAILABLE} cupos disponibles. Early Bird: $297`,
-    step0Btn: "Empezar →",
-    step1Label: "¿Cuál es tu nombre? 👋",
-    step1Placeholder: "Tu nombre completo",
-    step1Hint: "Presiona Enter ↵ para continuar",
-    step2Label: "¿Cuál es tu WhatsApp? 📱",
-    step2Sub: "Te enviamos la confirmación y el link del taller aquí",
-    step3AccessLabel: "Elige tu acceso — cupos limitados: 🎟️",
-    accessTiers: [
-      {
-        key: "chamber",
-        emoji: "🏛️",
-        title: "Chamber of Commerce Latino NJ",
-        body: "Exclusivo para miembros activos",
-        price: "$197",
-        originalPrice: "$297",
-        savings: "Ahorras $100",
+    // Application Form
+    formTitle: "Aplicá al programa",
+    formSubtitle: "Cupos limitados por cohorte. El equipo te contacta en menos de 24hs.",
+    formStep: "Paso",
+    formOf: "de",
+    formSteps: {
+      step1: {
+        label: "¿Cómo te llamás?",
+        placeholder: "Tu nombre completo"
       },
-      {
-        key: "ally",
-        emoji: "🤝",
-        title: "Aliados del ecosistema",
-        body: "Asesores, contadores, coaches, consultores",
-        price: "$247",
-        originalPrice: "$297",
-        savings: "Ahorras $50",
+      step2: {
+        label: "¿Cuál es tu WhatsApp?",
+        placeholder: "+591 7XX XXXXX",
+        error: "Ingresá un número boliviano válido (+591...)"
       },
-      {
-        key: "general",
-        emoji: "🚀",
-        title: "Público general",
-        body: "Early Bird — precio sube pronto",
-        price: "$297",
-        originalPrice: "$397",
-        savings: "Early Bird activo",
+      step3: {
+        label: "¿Cuál es tu nivel actual en tecnología?",
+        placeholder: "Seleccioná una opción",
+        options: [
+          { value: "curioso", label: "Curioso (empiezo desde cero)" },
+          { value: "freelance", label: "Freelance (ya tengo algún cliente)" },
+          { value: "emprendedor", label: "Emprendedor (tengo un negocio propio)" }
+        ]
       },
-      {
-        key: "referral",
-        emoji: "👫",
-        title: "Trae un amigo y los dos pagan menos",
-        body: "Solo 10 cupos con este precio",
-        price: "$197 c/u",
-        originalPrice: "$297",
-        savings: "Solo 10 cupos disponibles",
-        badge: "10 cupos",
+      step4: {
+        label: "¿Estás dispuesto a invertir tiempo aprendiendo Vibe Coding y n8n?",
+        yes: "Sí, estoy listo 🔥",
+        no: "No por ahora",
+        noMessage: "Gracias por tu honestidad 👋 Te avisamos cuando abramos la siguiente cohorte."
       },
-    ],
-    step4Label: "¿Cuál es tu nivel actual con IA y código? 🧠",
-    levelCards: [
-      { emoji: "🙈", title: "Cero absoluto", body: "Nunca he tocado código" },
-      { emoji: "🤖", title: "He jugado con ChatGPT", body: "Sé lo básico de IA" },
-      { emoji: "⚡", title: "Ya uso v0 o Cursor", body: "Tengo algo de experiencia" },
-    ],
-    loadingTexts: ["Verificando disponibilidad...", "Preparando tu lugar...", "¡Listo! Redirigiendo a WhatsApp..."],
-    successTitle: (name: string) => `¡Perfecto, ${name}! Revisa tu WhatsApp 💬`,
-    successBody: "Te confirmamos tu cupo en menos de 2 horas.",
-    successBtn: "Abrir WhatsApp de nuevo →",
-    nextBtn: "Continuar →",
+      step5: {
+        label: "¿Cuál es tu principal objetivo con este programa?",
+        placeholder: "Ej: Quiero conseguir mis primeros clientes freelance y dejar mi trabajo en 3 meses..."
+      }
+    },
+    formBack: "Volver",
+    formNext: "Siguiente",
+    formSubmit: "Enviar y Aplicar 🚀",
 
-    // Final CTA
-    finalTitle: "Tu landing page, en producción, este Miércoles",
-    finalTypewriterPhrases: [
-      "2 horas. Tú. Tu código. En vivo.",
-      "Sin devs. Sin esperar. La habilidad es tuya.",
-      "Miércoles 10 AM ET. 50 cupos. ¿Entras?",
+    // Support System
+    supportTitle: "Nunca te quedás trabado solo.",
+    supportSubtitle: "Un sistema de 3 niveles diseñado para que termines, sí o sí.",
+    supportItems: [
+      {
+        icon: '👨‍💻',
+        title: 'Talleres en Vivo — Sábados',
+        badge: 'Nivel 3',
+        badgeColor: 'bg-blue-500/20 text-blue-400',
+        desc: 'Cada sábado del programa tenés un workshop en vivo con el instructor. Construís en tiempo real, hacés preguntas y recibís feedback directo sobre tu proyecto.'
+      },
+      {
+        icon: '👥',
+        title: 'Tu Par de Construcción',
+        badge: 'Nivel 2',
+        badgeColor: 'bg-purple-500/20 text-purple-400',
+        desc: 'Compañero asignado para pair programming y accountability real. Canal de WhatsApp activo durante todo el sprint.'
+      },
+      {
+        icon: '🤖',
+        title: 'Agente IA 24/7',
+        badge: 'Nivel 1',
+        badgeColor: 'bg-emerald-500/20 text-emerald-400',
+        desc: 'Asistente entrenado con el currículum completo. Resuelve tus dudas técnicas a cualquier hora, sin juicios.'
+      }
     ],
-    countdownLabel: "Early Bird $297 termina en:",
-    finalCta: "SÍ, QUIERO MI LUGAR POR $297 →",
-    finalMicro: "→ Registro por WhatsApp · 3 cuotas de ~$99 disponibles · Reserva por $150 · Garantía total",
-    finalSocial: `🔥 ${ENROLLED_THIS_WEEK} personas ya reservaron su lugar esta semana`,
 
-    // Sticky bar
-    stickyText: `🔥 Solo ${SPOTS_AVAILABLE} cupos · Early Bird $297 (sube a $397) · Termina en`,
-    stickyBtn: "Reservar →",
+    // Pricing
+    priceBadge: "⚡ Más popular",
+    priceName: "AI Product Builder — Entry",
+    priceValue: "97",
+    priceCurrency: "USD",
+    priceDetail: "Pago único • Acceso permanente al contenido",
+    priceGuarantee: "🛡️ Garantía de devolución total en 7 días. Sin preguntas.",
+    priceSections: [
+      {
+        title: "📹 Contenido asincrónico",
+        items: [
+          'Clases grabadas disponibles 24/7 — avanzás a tu propio ritmo',
+          '+8 horas de contenido práctico organizado por sprints',
+          'Acceso permanente: revisá los módulos cuando los necesités',
+          'Agente IA de soporte entrenado con todo el currículum'
+        ]
+      },
+      {
+        title: "🎙️ Talleres en vivo — Sábados",
+        items: [
+          'Workshop en vivo cada sábado del programa (2 sesiones en total)',
+          'Construís junto al instructor en tiempo real',
+          'Q&A en vivo: resolvés dudas del sprint en el momento',
+          'Par de construcción asignado para accountability entre semana',
+          'Comunidad AI Product Builders Bolivia (acceso permanente)'
+        ]
+      }
+    ],
+    priceCta: "Quiero entrar ahora →",
 
     // Footer
-    footerTagline: "Formación tecnológica para la comunidad latina en USA.",
-    footerEventLabel: "Evento",
-    footerEventTime: "10 AM – 1 PM ET",
-    footerOnline: "100% online y remoto",
-    footerLinks: ["Política de privacidad", "Términos", "Contacto"],
-    footerWaTitle: "¿Preguntas antes de inscribirte?",
-    footerWaBtn: "Chatear por WhatsApp →",
-    footerCopy: `© 2026 Build in Nextjs. Evento 100% online. Horario Eastern Time (ET). NJ / NY / USA. Hecho con ❤️ para la comunidad latina.`,
-
-    heroUrgency: {
-      banner: "⚡ Early Bird $297 activo — Solo quedan 50 cupos · Sube a $397 después de este Miércoles",
-      wakeupLine1: "¿Cuánto te costó la última landing page que mandaste a hacer?",
-      wakeupLine2: "Ahora multiplica eso por cada cliente nuevo que quieras conseguir este año.",
-      mathHeader: "> cost-analysis --dependency-mode",
-      mathRed: "− Dev externo NJ:  $150/hr × 2 hrs + 4 semanas de espera  =  $300 + tiempo irrecuperable",
-      mathGreen: "+ Este taller:     $297 · 2 horas en vivo  =  autonomía técnica para siempre",
-      tableTitle: "El impuesto silencioso de depender de terceros",
-      tableHeaders: ["Escenario", "Sin Next.js", "Con Next.js (post-taller)"],
-      tableRows: [
-        ["Nueva campaña / landing", "2 semanas + $500–800 externos", "3 horas + deploy propio"],
-        ["SEO de tus activos", "HTML estático — invisible para Google", "SSR nativo — Google te premia"],
-        ["Precio de tu servicio", "Estándar de mercado", "Premium justificado técnicamente"],
-        ["Dependencia de terceros", "Alta — cuello de botella permanente", "Cero — autónomo en producción"],
-      ],
-      marqueeLabel: "Lo que dominarás este Miércoles:",
-      marqueeItems: ["Next.js 15", "Vercel", "Tailwind CSS", "v0.app", "Cursor", "Claude AI", "Framer Motion", "Resend"],
-      riskTitleNow: "AHORA — CADA SEMANA SIN ESTO",
-      riskItemsNow: [
-        "📉 Tu competencia ya deployó 3 sites este mes",
-        "📉 Cada semana = leads que van a otro lado",
-        "📉 El costo de subcontratación se acumula sin ROI",
-      ],
-      riskTitleFuture: "EN 6 MESES — SI NO ACTÚAS",
-      riskItemsFuture: [
-        "❌ Next.js será el estándar mínimo, no el diferencial",
-        "❌ Quienes ya lo saben cobrarán el doble que tú",
-        "❌ Tu brecha técnica habrá crecido 26 semanas más",
-      ],
-      socialProof1: `🔥 ${ENROLLED_THIS_WEEK} personas ya reservaron su lugar esta semana`,
-      socialProof2: `Solo ${SPOTS_AVAILABLE} cupos · Formato en vivo — el Q&A colapsa con más participantes`,
-      ctaHeadline: "No estás comprando un taller. Estás comprando autonomía técnica — para siempre.",
-      ctaButton: "→ Reservar mi cupo — $297 Early Bird",
-      trustLines: [
-        "🛡️ Garantía total — si no deployás una landing, entras al siguiente gratis",
-        "💳 3 cuotas de ~$99 disponibles · Reserva por $150",
-        "📍 Miércoles en vivo · NJ / NY · Online disponible",
-      ],
-      countdownLabel: "Early Bird $297 termina en:",
-    },
+    footerLocation: "Santa Cruz de la Sierra • Bolivia • 2026",
+    footerLinks: [
+      { label: "Términos de uso", href: "#" },
+      { label: "Política de privacidad", href: "#" },
+      { label: "Contacto", href: "#" }
+    ],
+    footerCopy: "© 2026 AI Product Builder. Todos los derechos reservados."
   },
 
   en: {
-    
-    instructorName: "Daniel Castiblanco",
-    instructorBadge: "Co-Founder & CTO",
-    instructorBio: "Software engineer with 7+ years of experience building full-stack products at scale. Specialist in TypeScript/Angular architecture, DevOps with Docker, and AI-based products. Creator of Sendell, a production AI agent platform with active clients.",
-    instructorStats: [
-      { value: "30+", label: "Projects deployed" },
-      { value: "7+", label: "Years experience" },
-    ],
-    sectionTeach: "Who teaches",
-    sectionFounders: "The founders",
-
-    navLogo: "Build in Nextjs",
+    // Navbar
+    navLogo: "AI Product Builder",
+    navBadge: "Bolivia",
     navLinks: [
-      { label: "The Method", href: "#metodo" },
       { label: "Program", href: "#curriculum" },
-      { label: "Testimonials", href: "#testimonios" },
-      { label: "Enroll", href: "#form" },
+      { label: "Stack", href: "#tech-stack" },
+      { label: "Price", href: "#pricing" },
     ],
-    navCta: "Secure my spot — $297",
-    navCountdownLabel: "EB:",
+    navCta: "Apply now →",
+    navCtaMobile: "Apply →",
 
-    eyebrow: `🎓 Intensive Training · 2 hours · Only ${SPOTS_AVAILABLE} spots · NJ · NY · USA`,
-    headline: "Master the skill to build and deploy $1,500+ landing pages and websites",
-    typewriterPrefix: "Your next landing page is",
-    typewriterPhrases: [
-      "deployed to production — built by you.",
-      "and you already know how to charge $1,500+ for it.",
-      "because you learned the method the best devs use.",
-      "your new skill that pays $1,500–$5,000 per project.",
-      "built in 2 hours of intensive live training.",
+    // Hero
+    heroPhrases: [
+      "Create landing pages that sell.",
+      "Automate with n8n.",
+      "Charge for your first project."
     ],
-    subheadline: "In this live workshop you'll learn the exact method used by the highest-paid developers in the USA to build, deploy, and sell landing pages with Next.js, AI, and pro tools — in real time, with you, this Wednesday",
-    trustSignals: [
-      { icon: "⚡", text: "2 live hours" },
-      { icon: "💼", text: "$1,500+ per project" },
-      { icon: "🛡️", text: "Full guarantee" },
+    heroSubtitle: "Learn to create landing pages that sell in 1 week. Charge for your first project.",
+    heroCta: "I want to apply now →",
+    heroSecondaryCta: "See full program ↓",
+    heroStats: [
+      { label: '7 days', delay: 0 },
+      { label: '2 Sprints', delay: 0.15 },
+      { label: '+8h practice', delay: 0.3 },
+      { label: '100% in production', delay: 0.45 }
     ],
-    heroCta: "Secure my spot ($297) →",
-    heroCopy: "Learn · build · deploy · in a single Wednesday · Full guarantee if you don't learn anything applicable",
-    heroSecondary: "See what you'll build ↓",
-    browserUrl: "Build in Nextjs.com ✓ 🔒",
-    terminalLines: [
-      "$ npx create-next-app@latest my-landing",
-      "✓ Ready in 2.3s",
-      "$ vercel deploy",
-      "✅ Production: https://my-landing.vercel.app",
-    ],
-    vercelBadge: "▲ Deployed to Production",
 
-    tickerPrefix: "You'll build with →",
-    tickerSuffix: "🇺🇸 100% en español · For the Latino community in USA",
-
-    painTitle: "Do any of these sound familiar?",
-    painPoints: [
-      { icon: "💸", title: "The cheapest dev you found charged $800 and took 4 weeks" },
-      { icon: "🔗", title: "You depend on someone else to update your own website" },
-      { icon: "📉", title: "Clients choose your competition because they have better digital presence" },
-      { icon: "⏳", title: "You've had that landing page pending for months while losing leads" },
-      { icon: "💻", title: "You tried to learn to code but tutorials are endless and confusing" },
+    // Entry Offer
+    entryBadge: "🔥 Entry Offer — Foundational Level",
+    entryTitle: "$97 USD • 2 Sprints • 14 days",
+    entryAccent: "Landing in production + first basic n8n workflow",
+    entrySubtext: "Promise: Charge for your first landing page in 1 week",
+    entrySprints: [
+      {
+        icon: '⚡',
+        title: 'Sprint 1',
+        desc: 'Professional landing deployed on Vercel'
+      },
+      {
+        icon: '🔄',
+        title: 'Sprint 2',
+        desc: 'Complete workflow: Form → n8n → CRM → Email'
+      },
+      {
+        icon: '💰',
+        title: 'Outcome',
+        desc: 'Real portfolio to charge your first client'
+      }
     ],
-    painFeaturedTitle: "You paid for programming courses that left you more confused than before",
-    painFeaturedBody: "(Traditional courses teach you to code like it's 2015. This workshop teaches you to build the way it's done in 2026.)",
+    entryOutcomeHeader: "What you take upon completion:",
+    entryOutcomeList: [
+      'Professional landing page in production',
+      'Own domain configured',
+      'Active lead capture form',
+      '24/7 working n8n workflow',
+      'Google Sheets as real-time CRM',
+      'Automatic Resend notifications',
+      'Digital completion certificate',
+      'Permanent community access'
+    ],
+    entryCta: "I want to apply to Entry program ($97) →",
+    entryGuarantee: "🛡️ 7-day full money-back guarantee • No questions asked",
 
+    // What You Build
+    whatTitle: "Your portfolio at finish.",
+    whatSubtitle: "In production. From day 1.",
+    whatProjects: [
+      {
+        icon: '🌐',
+        title: 'Professional Landing Page',
+        description: 'A website ready to capture leads, deployed on Vercel with your domain.',
+        badge: 'Week 1'
+      },
+      {
+        icon: '⚡',
+        title: 'Automation Workflow',
+        description: 'Form → n8n → Google Sheets CRM + automatic Resend notification. No manual work.',
+        badge: 'Week 1–2'
+      },
+      {
+        icon: '💼',
+        title: 'Quotation System',
+        description: 'An AI app that generates quotes for your clients in seconds.',
+        badge: 'Week 2'
+      }
+    ],
+
+    // Vibe Coding
     vibeTitle: "Code is no longer the barrier. The method is.",
-    vibeIntro: "Learning to build software today doesn't mean memorizing syntax. It means mastering the method to tell AI exactly what to build, how to iterate it, and when it's production-ready. That method has a name: Vibe Coding. And in 3 hours you'll master it.",
+    vibeIntro: "Today learning to build software doesn't mean memorizing syntax. It means mastering the method to tell AI exactly what to build, how to iterate it, and when it's production-ready. That method has a name: Vibe Coding. And in 3 hours you'll master it.",
     vibeSteps: [
       {
         num: "01",
@@ -554,8 +483,9 @@ export const translations = {
       "When you finish, you have the result AND the skill. Not just the video.",
     ],
 
-    nextTitle: "Not just code. The technology powering the giants.",
-    nextIntro: "The landing pages you'll build in this workshop aren't static HTML. They're Next.js applications — the same framework used by Netflix, TikTok, Twitch, Hulu, and thousands of million-dollar startups. That changes what you can charge.",
+    // Next.js Advantage
+    nextTitle: "Not just code. It's the tech giants use.",
+    nextIntro: "The landing pages you'll build aren't static HTML. They're Next.js apps — the same framework used by Netflix, TikTok, Twitch, and Hulu. This changes what you can charge.",
     nextCards: [
       {
         title: "Native SEO",
@@ -572,326 +502,230 @@ export const translations = {
       {
         title: "Million-Dollar Tech",
         body: "When you tell a client their landing is on Next.js — same stack as Netflix — the $500 price becomes $1,500 without objection.",
-        stat: "Used by Netflix · TikTok · Twitch · Vercel",
+        stat: "Used by Netflix • TikTok • Twitch • Vercel",
         icon: "TrendingUp",
       },
       {
         title: "Deploy in Minutes",
-        body: "Vercel + Next.js = from your code to a real domain in 3 minutes. No servers. No complicated hosting. Deploy with one command. Scales itself.",
-        stat: "0 config · Deploy in 3 min · Scales itself",
+        body: "Vercel + Next.js = from code to real domain in 3 minutes. No servers. No complicated hosting. One-command deploy. Scales itself.",
+        stat: "0 config • 3 min deploy • Scales itself",
         icon: "Rocket",
       },
     ],
-    nextQuote: "Companies that invest in Next.js don't do it for trends. They do it because it converts better, ranks better, and scales without limits. You'll learn it in 3 hours.",
+    nextQuote: "Companies investing in Next.js don't do it for trends. They do it because it converts better, ranks better, and scales without limits. You'll learn it in 3 hours.",
 
-    curriculumTitle: "Your Wednesday, module by module — 2 hours that change your career:",
-    learnBadge: "You'll learn:",
-    leaveBadge: "You'll leave with:",
-    modules: [
-      {
-        time: "10:00 AM ET",
-        title: "Express Setup with Antigravity + Next.js",
-        duration: "20 min",
-        learn: "How to set up a professional environment with Next.js 15 and Antigravity from scratch.",
-        leave: "Your project running locally with a professional stack ready for production.",
-      },
-      {
-        time: "10:20 AM ET",
-        title: "Landing Page with AI — Hero that stops the scroll",
-        duration: "40 min",
-        learn: "The anatomy of a converting Hero: visual hierarchy + copy + CTA. Professional animations with Motion.",
-        leave: "Your first section deployed on Vercel — a real URL you can share.",
-      },
-      {
-        time: "11:00 AM ET",
-        title: "Form connected to WhatsApp Business + automated email",
-        duration: "30 min",
-        learn: "Integrate Resend for automatic welcome emails and WhatsApp API for real conversions.",
-        leave: "Complete landing page with a working form that captures leads and sends them to WhatsApp.",
-      },
-      {
-        time: "11:30 AM ET",
-        title: "Deploy to Vercel or Cloudflare Pages with custom domain",
-        duration: "30 min",
-        learn: "Professional deploy with HTML/CSS/JS + Next.js. Custom domain. Your site live on the internet forever.",
-        leave: "Site deployed with a custom domain, Google-indexable, ready to get clients.",
-      },
+    // Tech Stack
+    techTitle: "The tools the market is asking for right now.",
+    techTools: [
+      { icon: '⚡', name: 'v0.app', desc: 'Generate professional interfaces with prompts' },
+      { icon: '🔄', name: 'n8n', desc: 'Visual automations without writing code' },
+      { icon: '🧠', name: 'Claude Code', desc: 'AI that writes the logic for you' },
+      { icon: '🚀', name: 'Vercel', desc: 'Production deploy in minutes' },
+      { icon: '📊', name: 'Google Sheets', desc: 'Your visual CRM from day 1' },
+      { icon: '📧', name: 'Resend', desc: 'Real-time automatic lead notifications' }
     ],
 
-    valueTitle: "Everything you build and receive when you enroll today:",
-    valueItems: [
-      { label: "Live workshop access (2 hours) — Landing Page with AI", price: "$397" },
-      { label: "Your landing page deployed with custom domain", price: "$297" },
-      { label: "Form connected to WhatsApp Business", price: "$197" },
-      { label: "Automatic welcome email (Resend)", price: "$97" },
-      { label: "Professional animations (Motion)", price: "$97" },
-      { label: "Private recording 7 days", price: "$97" },
-      { label: "Private WhatsApp community (30 days)", price: "$57" },
-      { label: "Live Q&A with the instructor", price: "$97" },
+    // Automation Showcase
+    autoEyebrow: "What you build in Week 1",
+    autoTitle: "Lead Capture → CRM with automatic notification",
+    autoNodes: [
+      { icon: '📋', label: 'Form', desc: 'Your landing captures the lead', highlight: false },
+      { icon: '⚡', label: 'n8n', desc: 'Orchestrates the whole flow', highlight: true },
+      { icon: '📊', label: 'Sheets', desc: 'Real CRM with each lead', highlight: false },
+      { icon: '📧', label: 'Emailing', desc: 'Notification via Resend', highlight: false }
     ],
-    valueTotalLabel: "Total training value:",
-    valueTotalPrice: "$1,336",
-    valueYourLabel: "Your investment today:",
-    valueYourPrice: "$297",
-    valueAnchor: "A dev in NJ charges $150/hr. 2 hours of consulting = $300. You pay $297 and learn to build it yourself — forever.",
+    autoFooter: "Every time someone fills your form, n8n captures it, saves it to your Google Sheets as a real CRM, and sends you an instant notification via Resend. Never a lost lead again.",
 
-    // Pricing tiers
-    pricingTitle: "Choose your access — limited spots:",
-    pricingTiers: [
+    // Curriculum
+    currTitle: "2 Sprints. 14 days. A real portfolio.",
+    currSprints: [
       {
-        label: "Chamber of Commerce Latino NJ",
-        badge: "Members",
-        price: "$197",
-        originalPrice: "$297",
-        savings: "You save $100",
-        description: "Exclusive for active members of the Chamber of Commerce Latino New Jersey.",
-        cta: "Get this price →",
+        badge: "Sprint 1 — Week 1",
+        title: "Your First Landing Page in Production",
+        items: [
+          "Generate your full UI with v0.app using only prompts (no code writing)",
+          "Connect a real lead capture form",
+          "Automate the flow: Form → n8n → Google Sheets → Resend",
+          "Deploy on Vercel with own domain in less than 10 minutes",
+          "Deliverable: Professional landing page ready to show and charge"
+        ],
+        outcome: "🎯 Outcome: Finish the week with a landing page in production and your first active CRM workflow."
       },
       {
-        label: "Ecosystem allies",
-        badge: "Allies",
-        price: "$247",
-        originalPrice: "$297",
-        savings: "You save $50",
-        description: "For business advisors, accountants, coaches, and consultants who refer clients.",
-        cta: "Get this price →",
-      },
-      {
-        label: "General public",
-        badge: "Early Bird",
-        price: "$297",
-        originalPrice: "$397",
-        savings: "Price increases to $397 soon",
-        description: "Full workshop access. Early bird price active while spots are available.",
-        cta: "Secure my spot →",
-        highlighted: true,
-      },
+        badge: "Sprint 2 — Week 2",
+        title: "APIs, Business Logic, and Your First Full Workflow",
+        items: [
+          "Webhooks, JSON, and REST APIs explained in human language",
+          "Automatic quotation system built in n8n",
+          "Claude Code processes and transforms real data",
+          "Automatic email notifications with Resend for every user action",
+          "Deliverable: Complete automation system for a real business"
+        ],
+        outcome: "🎯 Outcome: Leave with 2 projects in your portfolio that you can sell tomorrow."
+      }
     ],
 
-    // Growth hack
-    growthTitle: "Bring a friend and both pay less:",
-    growthBody: "Refer a family member, friend, or colleague — when both of you enroll, each pays only $197 instead of $297. Share your personalized link and the discount applies automatically. Only available for the next 10 referred spots.",
-    growthBadge: "Only 10 spots at this price",
-    growthCta: "Get my referral link →",
-
-    // Payment options
-    paymentTitle: "Flexible payment options:",
-    paymentOptions: [
-      { label: "Full payment", detail: "$297 today", highlight: false },
-      { label: "3 installments", detail: "~$99–$107 / month", highlight: false },
-      { label: "Early reserve", detail: "$150 today → rest in 2 installments before the workshop", highlight: true },
-    ],
-
-    testimonialTitle: "What those who already went through the training say:",
-    testimonials: [
-      {
-        before: "I had tried 3 programming courses and abandoned all of them...",
-        during: "...but when I saw the instructor build the Hero live, suddenly everything made sense.",
-        after: "Two weeks later I had already charged my first client $450 in Hackensack, NJ.",
-        author: "María R.",
-        role: "Freelancer · New Jersey",
-      },
-      {
-        before: "I had my beauty business but no online presence. I depended 100% on Instagram...",
-        during: "...in the SEO module I understood why Google couldn't find me. It was a total 'aha' moment.",
-        after: "My Next.js landing now appears on Google. I got 3 new clients the first month.",
-        author: "Carlos M.",
-        role: "Entrepreneur · Queens, NY",
-      },
-      {
-        before: "I was a Canva designer. I knew nothing about code. I felt web development wasn't for me...",
-        during: "...when I deployed my first URL on Vercel at the 45-minute mark, I cried from emotion.",
-        after: "I now offer Next.js landing pages at $800 to Latino restaurants in my area.",
-        author: "Diana P.",
-        role: "Designer → Developer · Paterson, NJ",
-      },
-    ],
-    beforeLabel: "Before",
-    duringLabel: "During",
-    afterLabel: "After",
-    statsBar: `🎓 ${INSTRUCTOR_STUDENTS}+ students trained · 🌎 NJ · NY · FL · TX · CA · IL · and more · ⭐ 4.9/5 average rating · 💼 $450 average first-month income`,
-
-    guaranteeTitle: "Real learning guarantee",
-    guaranteeBody: "If you complete the live workshop and at the end of 2 hours you can't show me a deployed landing page with your name, we give you free access to the next workshop. You can also opt for a gift card to repeat the training whenever you want. You have multiple paths back — you lose nothing.\n\nWe don't sell webinar access. We sell the certainty that you'll build something that works, with your name on the internet, the same day.",
+    // Is This For You
+    forYouTitle: "Is this program for you?",
+    forYouYes: {
+      title: "It's perfect for you if...",
+      icon: "✅",
+      items: [
+        "You're an entrepreneur and need to go digital now, not in 6 months",
+        "You're a graduate looking for technical skills with real demand in Bolivia",
+        "You have an idea but don't know how to build it without hiring a dev",
+        "You want to charge for your first landing page this week",
+        "You can dedicate 2–3 hours daily for 2 weeks"
+      ]
+    },
+    forYouNo: {
+      title: "It's not for you if...",
+      icon: "❌",
+      items: [
+        "You prefer learning theory before building something real",
+        "You expect AI to do everything alone without your direction",
+        "You don't have time to practice during the 2 weeks",
+        "You're looking for a university degree, not immediate results"
+      ]
+    },
 
     // Credibility
     credibilityTitle: "Credibility",
-    credibilitySubtitle: "Backed by real experience",
+    credibilitySubtitle: "Backed by Experience",
     credibilityCards: [
       {
         icon: "Building2",
-        title: "Proven methodology",
-        body: "Build Nextjs Landing Pages is a spin-off of Protolylat. We are a software factory with 12+ years of real experience building digital products for real clients.",
+        title: "Proven Methodology",
+        body: "AI Product Builder Bolivia is a results-focused training. Our methodology is based on years of building real digital products for global clients.",
       },
       {
         icon: "Wrench",
-        title: "Founders in the trenches",
+        title: "Founders in the Trenches",
         body: "We are not theorists. We build, deploy, and monetize products every day. We teach what we practice.",
       },
       {
         icon: "Star",
-        title: "Exclusive first edition",
-        body: "Cohort #1 is a unique opportunity: direct access to the founders, founding member pricing, and the chance to shape the program.",
+        title: "Exclusive Community",
+        body: "Direct access to a network of entrepreneurs and technologists in Bolivia building the future with AI.",
       },
     ],
 
-    faqTitle: "Frequently asked questions",
-    faqs: [
-      {
-        q: "Do I need to know how to code to attend?",
-        a: "No. This workshop is designed for professionals without a technical background. The Vibe Coding method uses AI as a copilot so you direct what to build, not write every line of code.",
-      },
-      {
-        q: "What if I fall behind during the workshop?",
-        a: "The instructor does sync pauses every 30 minutes. Also, all participants receive the base code at the start.",
-      },
-      {
-        q: "How is this different from watching a YouTube tutorial?",
-        a: "In a tutorial you learn by watching. Here you build in real time with 50 people, with an instructor who answers your specific questions. That active pressure consolidates learning.",
-      },
-      {
-        q: "Can I use what I learn at my current job?",
-        a: "Absolutely. More than 60% of our students have applied the skills within their current job or to offer freelance services in parallel.",
-      },
-      {
-        q: "Why do you register via WhatsApp?",
-        a: "That's how we confirm your spot immediately, send you the workshop link and reminders. It's faster and more direct than email — and we can answer any questions before the event.",
-      },
-      {
-        q: "Is the workshop recorded?",
-        a: "There is private recording access for 7 days — no guarantee of permanent replay. The workshop is designed to be experienced live: the group energy and real-time Q&A are part of the learning.",
-      },
-      {
-        q: "Can I offer this service to clients afterward?",
-        a: "Yes, and we actually dedicate 15 minutes of the final module specifically to this. The code you build is 100% yours with commercial license.",
-      },
+    // Instructor
+    sectionTeach: "Who Teaches",
+    sectionFounders: "The Founders",
+    instructorBadge: "Co-Founder & CTO",
+    instructorBio: "Software engineer with 7+ years building full-stack products at scale. Specialist in TypeScript/Angular architecture, DevOps with Docker, and AI-based products.",
+    instructorStats: [
+      { value: "30+", label: "Projects deployed" },
+      { value: "7+", label: "Years of experience" },
     ],
 
-    formTitle: `Secure your spot — Only ${SPOTS_AVAILABLE} spots left`,
-    formSubtitle: "2 minutes · 100% via WhatsApp · No credit card yet",
-    step0Title: "Reserve your spot in 2 minutes!",
-    step0Body: `Only ${SPOTS_AVAILABLE} spots available. Early Bird: $297`,
-    step0Btn: "Start →",
-    step1Label: "What's your name? 👋",
-    step1Placeholder: "Your full name",
-    step1Hint: "Press Enter ↵ to continue",
-    step2Label: "What's your WhatsApp? 📱",
-    step2Sub: "We'll send your confirmation and workshop link here",
-    step3AccessLabel: "Choose your access — limited spots: 🎟️",
-    accessTiers: [
-      {
-        key: "chamber",
-        emoji: "🏛️",
-        title: "Chamber of Commerce Latino NJ",
-        body: "Exclusive for active members",
-        price: "$197",
-        originalPrice: "$297",
-        savings: "Save $100",
+    // Application Form
+    formTitle: "Apply to the program",
+    formSubtitle: "Limited spots per cohort. The team contacts you in less than 24h.",
+    formStep: "Step",
+    formOf: "of",
+    formSteps: {
+      step1: {
+        label: "What's your name?",
+        placeholder: "Your full name"
       },
-      {
-        key: "ally",
-        emoji: "🤝",
-        title: "Ecosystem allies",
-        body: "Advisors, accountants, coaches, consultants",
-        price: "$247",
-        originalPrice: "$297",
-        savings: "Save $50",
+      step2: {
+        label: "What's your WhatsApp?",
+        placeholder: "+591 7XX XXXXX",
+        error: "Enter a valid Bolivian number (+591...)"
       },
-      {
-        key: "general",
-        emoji: "🚀",
-        title: "General public",
-        body: "Early Bird — price increases soon",
-        price: "$297",
-        originalPrice: "$397",
-        savings: "Early Bird active",
+      step3: {
+        label: "What's your current level in technology?",
+        placeholder: "Select an option",
+        options: [
+          { value: "curioso", label: "Curious (starting from zero)" },
+          { value: "freelance", label: "Freelance (already have some clients)" },
+          { value: "emprendedor", label: "Entrepreneur (own my business)" }
+        ]
       },
-      {
-        key: "referral",
-        emoji: "👫",
-        title: "Bring a friend — both pay less",
-        body: "Only 10 spots at this price",
-        price: "$197 ea.",
-        originalPrice: "$297",
-        savings: "Only 10 spots available",
-        badge: "10 spots",
+      step4: {
+        label: "Are you willing to invest time learning Vibe Coding and n8n?",
+        yes: "Yes, I'm ready 🔥",
+        no: "Not for now",
+        noMessage: "Thanks for your honesty 👋 We'll notify you when we open the next cohort."
       },
-    ],
-    step4Label: "What's your current level with AI and code? 🧠",
-    levelCards: [
-      { emoji: "🙈", title: "Absolute zero", body: "Never touched code" },
-      { emoji: "🤖", title: "I've played with ChatGPT", body: "I know AI basics" },
-      { emoji: "⚡", title: "I already use v0 or Cursor", body: "I have some experience" },
-    ],
-    loadingTexts: ["Checking availability...", "Preparing your spot...", "Ready! Redirecting to WhatsApp..."],
-    successTitle: (name: string) => `Perfect, ${name}! Check your WhatsApp 💬`,
-    successBody: "We'll confirm your spot in less than 2 hours.",
-    successBtn: "Open WhatsApp again →",
-    nextBtn: "Continue →",
-
-    finalTitle: "Your landing page, in production, this Wednesday",
-    finalTypewriterPhrases: [
-      "2 hours. You. Your code. Live.",
-      "No devs. No waiting. The skill is yours.",
-      "Wednesday 10 AM ET. 50 spots. Are you in?",
-    ],
-    finalSocial: `🔥 ${ENROLLED_THIS_WEEK} people have already reserved their spot this week`,
-    finalMicro: "→ WhatsApp registration · 3 installments of ~$99 available · Reserve for $250 · Full guarantee",
-
-    heroUrgency: {
-      banner: "⚡ Early Bird $297 active — Only 50 spots left · Rises to $397 after this Wednesday",
-      wakeupLine1: "How much did the last landing page you commissioned cost you?",
-      wakeupLine2: "Now multiply that by every new client you want to get this year.",
-      mathHeader: "> cost-analysis --dependency-mode",
-      mathRed: "− External Dev NJ:  $150/hr × 2 hrs + 4 weeks of waiting  =  $300 + unrecoverable time",
-      mathGreen: "+ This workshop:  $297 · 2 hours live  =  technical autonomy forever",
-      tableTitle: "The silent tax of depending on third parties",
-      tableHeaders: ["Scenario", "Without Next.js", "With Next.js (post-workshop)"],
-      tableRows: [
-        ["New campaign / landing", "2 weeks + $500–800 external", "3 hours + own deploy"],
-        ["SEO of your assets", "Static HTML — invisible to Google", "Native SSR — Google rewards you"],
-        ["Price of your service", "Market standard", "Technically justified premium"],
-        ["Dependency on third parties", "High — permanent bottleneck", "Zero — autonomous in production"],
-      ],
-      marqueeLabel: "What you will master this Wednesday:",
-      marqueeItems: ["Next.js 15", "Vercel", "Tailwind CSS", "v0.app", "Cursor", "Claude AI", "Framer Motion", "Resend"],
-      riskTitleNow: "NOW — EVERY WEEK WITHOUT THIS",
-      riskItemsNow: [
-        "📉 Your competition already deployed 3 sites this month",
-        "📉 Every week = leads going elsewhere",
-        "📉 Subcontracting cost accumulates without ROI",
-      ],
-      riskTitleFuture: "IN 6 MONTHS — IF YOU DON'T ACT",
-      riskItemsFuture: [
-        "❌ Next.js will be the minimum standard, not the differentiator",
-        "❌ Those who already know it will charge double what you do",
-        "❌ Your technical gap will have grown 26 more weeks",
-      ],
-      socialProof1: `🔥 ${ENROLLED_THIS_WEEK} people have already reserved their spot this week`,
-      socialProof2: `Only ${SPOTS_AVAILABLE} spots · Live format — Q&A collapses with more participants`,
-      ctaHeadline: "You're not buying a workshop. You're buying technical autonomy — forever.",
-      ctaButton: "→ Secure my spot — $297 Early Bird",
-      trustLines: [
-        "🛡️ Total guarantee — if you don't deploy a landing, the next one is free",
-        "💳 3 installments of ~$99 available · Reserve for $150",
-        "📍 Wednesday live · NJ / NY · Online available",
-      ],
-      countdownLabel: "Early Bird $297 ends in:",
+      step5: {
+        label: "What is your main goal with this program?",
+        placeholder: "Ex: I want to get my first freelance clients and leave my job in 3 months..."
+      }
     },
+    formBack: "Back",
+    formNext: "Next",
+    formSubmit: "Send and Apply 🚀",
 
-    stickyText: `🔥 Only ${SPOTS_AVAILABLE} spots · Early Bird $297 (goes to $397) · Ends in`,
-    stickyBtn: "Reserve →",
+    // Support System
+    supportTitle: "You never get stuck alone.",
+    supportSubtitle: "A 3-level system designed so you finish, no matter what.",
+    supportItems: [
+      {
+        icon: '👨‍💻',
+        title: 'Live Workshops — Saturdays',
+        badge: 'Level 3',
+        badgeColor: 'bg-blue-500/20 text-blue-400',
+        desc: 'Every Saturday you have a live workshop with the instructor. Build in real-time, ask questions, and get direct feedback on your project.'
+      },
+      {
+        icon: '👥',
+        title: 'Your Building Partner',
+        badge: 'Level 2',
+        badgeColor: 'bg-purple-500/20 text-purple-400',
+        desc: 'Assigned companion for pair programming and real accountability. Active WhatsApp channel throughout the sprint.'
+      },
+      {
+        icon: '🤖',
+        title: '24/7 AI Agent',
+        badge: 'Level 1',
+        badgeColor: 'bg-emerald-500/20 text-emerald-400',
+        desc: 'Assistant trained with the full curriculum. Resolves your technical doubts at any time, without judgment.'
+      }
+    ],
 
-    footerTagline: "Tech training for the Latino community in the USA.",
-    footerEventLabel: "Event",
-    footerEventTime: "10 AM – 1 PM ET",
-    footerOnline: "100% online and remote",
-    footerLinks: ["Privacy Policy", "Terms", "Contact"],
-    footerWaTitle: "Questions before enrolling?",
-    footerWaBtn: "Chat on WhatsApp →",
-    footerCopy: `© 2026 Build in Nextjs. 100% online event. Eastern Time (ET). NJ / NY / USA. Made with ❤️ for the Latino community.`,
-  },
+    // Pricing
+    priceBadge: "⚡ Most popular",
+    priceName: "AI Product Builder — Entry",
+    priceValue: "97",
+    priceCurrency: "USD",
+    priceDetail: "One-time payment • Permanent content access",
+    priceGuarantee: "🛡️ 7-day full money-back guarantee. No questions asked.",
+    priceSections: [
+      {
+        title: "📹 Asynchronous Content",
+        items: [
+          'Recorded classes available 24/7 — advance at your own pace',
+          '+8 hours of practical content organized by sprints',
+          'Permanent access: review modules whenever you need them',
+          'AI support agent trained with the entire curriculum'
+        ]
+      },
+      {
+        title: "🎙️ Live Workshops — Saturdays",
+        items: [
+          'Live workshop every Saturday of the program (2 sessions total)',
+          'Build alongside the instructor in real time',
+          'Live Q&A: resolve sprint doubts on the spot',
+          'Building partner assigned for mid-week accountability',
+          'AI Product Builders Bolivia Community (permanent access)'
+        ]
+      }
+    ],
+    priceCta: "I want to join now →",
+
+    // Footer
+    footerLocation: "Santa Cruz de la Sierra • Bolivia • 2026",
+    footerLinks: [
+      { label: "Terms of use", href: "#" },
+      { label: "Privacy policy", href: "#" },
+      { label: "Contact", href: "#" }
+    ],
+    footerCopy: "© 2026 AI Product Builder. All rights reserved."
+  }
 }
 
-export type Lang = "es" 
-export type Copy = typeof translations.es
+export type Lang = keyof typeof translations
+export type Copy = (typeof translations)["es"]

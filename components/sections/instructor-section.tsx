@@ -1,16 +1,7 @@
 "use client"
 
-import { Copy, INSTRUCTOR_INITIALS, INSTRUCTOR_NAME, Lang } from "@/lib/translations"
+import { INSTRUCTOR_INITIALS, INSTRUCTOR_NAME, Copy } from "@/lib/translations"
 import { motion } from "framer-motion"
-
-
-const fadeUpVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-}
-
- const DANIEL_NAME = "Daniel Castiblanco"
-const DANIEL_INITIALS = "DC"
 
 interface InstructorProps {
   c: Copy
@@ -25,7 +16,6 @@ interface FounderCardProps {
   gradientFrom?: string
   gradientTo?: string
   delay?: number
-  prefersReducedMotion: boolean
 }
 
 function FounderCard({
@@ -34,35 +24,22 @@ function FounderCard({
   badge,
   bio,
   stats,
-  gradientFrom = "#F97316",
-  gradientTo = "#9A3412",
+  gradientFrom = "#10b981", // Emerald 500
+  gradientTo = "#047857",   // Emerald 700
   delay = 0,
-  prefersReducedMotion,
 }: FounderCardProps) {
   return (
     <motion.div
-      variants={
-        prefersReducedMotion
-          ? {}
-          : {
-              hidden: { opacity: 0, y: 40 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.6, ease: "easeOut", delay },
-              },
-            }
-      }
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
-      className="flex flex-col items-center gap-6 rounded-2xl border border-slate-700 p-8"
-      style={{ backgroundColor: "#1E293B" }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="flex flex-col items-center gap-6 rounded-2xl border border-white/10 p-8 bg-white/5 hover:border-emerald-500/30 transition-all"
     >
       {/* Avatar */}
       <div className="flex flex-col items-center gap-3">
         <div
-          className="w-24 h-24 rounded-full flex items-center justify-center text-2xl font-black text-white border-2 border-orange-500/50 select-none"
+          className="w-24 h-24 rounded-full flex items-center justify-center text-2xl font-black text-white border-2 border-emerald-500/50 select-none shadow-lg shadow-emerald-500/20"
           style={{
             background: `linear-gradient(135deg, ${gradientFrom} 0%, ${gradientTo} 100%)`,
           }}
@@ -70,7 +47,7 @@ function FounderCard({
         >
           {initials}
         </div>
-        <span className="inline-flex items-center px-3 py-1 rounded-full border border-orange-500/40 bg-orange-500/10 text-orange-400 text-xs font-semibold text-center">
+        <span className="inline-flex items-center px-3 py-1 rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-400 text-xs font-semibold text-center mt-2">
           {badge}
         </span>
       </div>
@@ -78,19 +55,18 @@ function FounderCard({
       {/* Bio */}
       <div className="flex flex-col items-center text-center gap-4 w-full">
         <h3 className="text-xl font-bold text-white">{name}</h3>
-        <p className="text-slate-400 leading-relaxed text-sm">{bio}</p>
+        <p className="text-white/60 leading-relaxed text-sm">{bio}</p>
 
         {/* Stats */}
         {stats && stats.length > 0 && (
-          <div className="grid grid-cols-2 gap-3 w-full justify-between mt-2">
+          <div className="grid grid-cols-2 gap-3 w-full justify-between mt-4">
             {stats.map((stat, i) => (
               <div
                 key={i}
-                className="flex flex-col items-center p-3 rounded-xl border border-slate-700 text-center"
-                style={{ backgroundColor: "#0F172A" }}
+                className="flex flex-col items-center p-3 rounded-xl border border-white/5 bg-black/40 text-center"
               >
-                <span className="text-xl font-black text-orange-400 tabular-nums">{stat.value}</span>
-                <span className="text-xs text-slate-500 mt-1 leading-tight">{stat.label}</span>
+                <span className="text-xl font-black text-emerald-400 tabular-nums">{stat.value}</span>
+                <span className="text-[10px] uppercase tracking-wider text-white/30 mt-1 leading-tight">{stat.label}</span>
               </div>
             ))}
           </div>
@@ -101,41 +77,40 @@ function FounderCard({
 }
 
 export function InstructorSection({ c }: InstructorProps) {
+  const DANIEL_INITIALS = "DC"
+  const DANIEL_NAME = "Daniel Castiblanco"
 
   return (
     <section
       id="instructor"
-      className="py-20 px-4 sm:px-6"
-      style={{ backgroundColor: "#0F172A" }}
+      className="py-20 px-4 bg-black"
     >
       <div className="max-w-5xl mx-auto">
         {/* Section header */}
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="text-center mb-16"
         >
-          <p className="text-orange-400 text-sm font-semibold uppercase tracking-widest mb-2">
+          <p className="text-emerald-500 text-sm font-semibold uppercase tracking-widest mb-4">
             {c.sectionTeach}
           </p>
-          <h2 className="text-3xl sm:text-4xl font-black text-white">
+          <h2 className="text-3xl md:text-5xl font-black text-white">
             {c.sectionFounders}
           </h2>
         </motion.div>
 
         {/* Two-column founder cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <FounderCard
             initials={INSTRUCTOR_INITIALS}
             name={INSTRUCTOR_NAME}
             badge={c.instructorBadge}
             bio={c.instructorBio}
             stats={c.instructorStats}
-            gradientFrom="#F97316"
-            gradientTo="#9A3412"
             delay={0}
-            prefersReducedMotion={true}
           />
           <FounderCard
             initials={DANIEL_INITIALS}
@@ -143,10 +118,9 @@ export function InstructorSection({ c }: InstructorProps) {
             badge={c.instructorBadge}
             bio={c.instructorBio}
             stats={c.instructorStats}
-            gradientFrom="#3B82F6"
-            gradientTo="#1D4ED8"
+            gradientFrom="#6366f1" // Indigo 500
+            gradientTo="#4338ca"   // Indigo 700
             delay={0.15}
-            prefersReducedMotion={true}
           />
         </div>
       </div>

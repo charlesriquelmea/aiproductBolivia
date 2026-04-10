@@ -11,16 +11,6 @@ const iconMap: Record<string, React.ElementType> = {
   Star,
 }
 
-const fadeUpVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-}
-
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
-}
-
 interface CredibilityProps {
   c: Copy
 }
@@ -29,57 +19,51 @@ export function CredibilitySection({ c }: CredibilityProps) {
   return (
     <section
       id="credibilidad"
-      className="py-20 px-4 sm:px-6"
-      style={{ backgroundColor: "#020617" }}
+      className="py-20 px-4 bg-black"
     >
-      <div className="max-w-3xl mx-auto flex flex-col gap-10">
+      <div className="max-w-6xl mx-auto flex flex-col gap-12">
         {/* Header */}
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="text-center"
         >
-          <p className="text-orange-500 text-sm font-bold uppercase tracking-widest mb-2">
+          <p className="text-emerald-500 text-sm font-bold uppercase tracking-widest mb-4">
             {c.credibilityTitle}
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-balance">
+          <h2 className="text-3xl md:text-5xl font-black text-white text-balance">
             {c.credibilitySubtitle}
           </h2>
         </motion.div>
 
         {/* Cards */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-5"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {c.credibilityCards.map((card, i) => {
             const Icon = iconMap[card.icon] ?? Star
             return (
               <motion.div
                 key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
               >
                 <Card
-                  className="h-full border rounded-2xl overflow-hidden"
-                  style={{
-                    borderColor: "rgb(30,41,59)",
-                    backgroundColor: "#0F172A",
-                  }}
+                  className="h-full border border-white/10 bg-white/5 rounded-2xl overflow-hidden hover:border-emerald-500/30 transition-all"
                 >
-                  <CardContent className="p-6 flex flex-col gap-4">
+                  <CardContent className="p-8 flex flex-col gap-5">
                     <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                      style={{ backgroundColor: "rgba(249,115,22,0.12)" }}
+                      className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-emerald-500/10 border border-emerald-500/20"
                     >
-                      <Icon size={20} className="text-orange-400" />
+                      <Icon size={24} className="text-emerald-400" />
                     </div>
                     <div>
-                      <h3 className="text-white font-bold text-base mb-2 text-balance">
+                      <h3 className="text-white font-bold text-lg mb-3 text-balance">
                         {card.title}
                       </h3>
-                      <p className="text-slate-400 text-sm leading-relaxed">
+                      <p className="text-white/60 text-sm leading-relaxed">
                         {card.body}
                       </p>
                     </div>
@@ -88,7 +72,7 @@ export function CredibilitySection({ c }: CredibilityProps) {
               </motion.div>
             )
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   )

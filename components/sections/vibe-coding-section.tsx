@@ -5,16 +5,6 @@ import { CheckCircle } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Copy } from "@/lib/translations"
 
-const fadeUpVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-}
-
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
-}
-
 interface VibeCodingProps {
   c: Copy
 }
@@ -23,66 +13,65 @@ export function VibeCodingSection({ c }: VibeCodingProps) {
   return (
     <section
       id="metodo"
-      className="py-20 px-4 sm:px-6"
-      style={{ backgroundColor: "#0F172A" }}
+      className="py-20 px-4 bg-black"
     >
       <div className="max-w-4xl mx-auto">
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-5 text-balance">
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-5 text-balance">
             {c.vibeTitle}
           </h2>
-          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xl text-white/50 leading-relaxed max-w-2xl mx-auto">
             {c.vibeIntro}
           </p>
         </motion.div>
 
         {/* Steps */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="flex flex-col gap-10 mb-14"
-        >
+        <div className="flex flex-col gap-10 mb-14">
           {c.vibeSteps.map((step, i) => (
             <motion.div
               key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="flex items-start gap-6"
             >
               <span
-                className="text-5xl md:text-6xl font-black leading-none shrink-0 select-none"
-                style={{ color: "#F97316", minWidth: "3.5rem" }}
+                className="text-5xl md:text-6xl font-black leading-none shrink-0 select-none text-emerald-500 min-w-[3.5rem]"
               >
                 {step.num}
               </span>
               <div className="pt-1">
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-1">{step.title}</h3>
-                <p className="text-slate-400 leading-relaxed">{step.body}</p>
+                <p className="text-white/60 leading-relaxed">{step.body}</p>
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Alert box */}
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
-          <Alert className="border-cyan-400/40 bg-cyan-400/5 rounded-xl">
-            <AlertTitle className="text-cyan-300 font-bold text-base mb-3">
+          <Alert className="border-emerald-500/30 bg-emerald-500/5 rounded-2xl p-6">
+            <AlertTitle className="text-emerald-400 font-bold text-lg mb-4">
               {c.alertTitle}
             </AlertTitle>
             <AlertDescription>
               <ul className="flex flex-col gap-3">
                 {c.alertBullets.map((bullet, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle size={18} className="text-green-400 shrink-0 mt-0.5" />
-                    <span className="text-slate-300 leading-relaxed">{bullet}</span>
+                    <CheckCircle size={18} className="text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-white/70 leading-relaxed">{bullet}</span>
                   </li>
                 ))}
               </ul>
